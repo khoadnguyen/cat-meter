@@ -1,27 +1,47 @@
-# CatApp
+# Cat-meter
+
+Cat-meter is an Angular application that uses [Random Cat API](http://aws.random.cat) to query a random cat image upon page load. Users can save that image to a category and have data persist locally on the browser.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Cat-meter is an Angular project using Typescript. This is purely a client side application that utilized local storage for it's database. Documentation on the local storage packaged used can be found:
 
-## Code scaffolding
+```
+https://github.com/cyrilletuzi/angular-async-local-storage
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+To begin make sure node and npm are installed. In addition, make sure that you have [Angular CLI](https://cli.angular.io/) installed locally. This project was uses Angular 7.3.8.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install -g @angular/cli
+```
 
-## Running unit tests
+### Installing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Clone the remote repository
 
-## Running end-to-end tests
+```
+git clone https://github.com/khoadnguyen/cat-meter
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+From within the `cat-app` directory, run `npm install` to install all dependencies.
 
-## Further help
+```
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Once that completes, use `ng serve` to get a local copy running
+
+```
+ng serve
+```
+
+This should deploy the an instance of the app running locally at:
+
+```
+http://localhost:4200/
+```

@@ -1,0 +1,14 @@
+.cat-list_image-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.cat-list_img-wrapper {
+  margin: 2.5%;
+  flex-basis: 45%;
+}
+
+.cat-list_img {
+  max-height: 200px;
+}

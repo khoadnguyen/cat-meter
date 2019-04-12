@@ -1,0 +1,22 @@
+.main-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  background: rgb(240, 240, 240);
+  max-width: 60%;
+  margin: 3rem auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    max-width: 35%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-container {
+    max-width: 25%;
+  }
+}

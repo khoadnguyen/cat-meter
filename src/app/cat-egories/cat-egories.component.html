@@ -1,0 +1,20 @@
+<section class="cat-egories_container container-fluid flex-column flex-nowrap justify-content-between mt-3">
+  <div class="row flex-fill mb-3">
+    <div class="col">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Cat-egory</th>
+            <th scope="col">#</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cat of api.groupedCatArray" (click)="setDisplayCatList(cat)">
+            <th scope="row">{{cat.category}}</th>
+            <td>{{cat.items.length | json}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

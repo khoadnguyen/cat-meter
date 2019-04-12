@@ -1,0 +1,28 @@
+<section class="cat-loader_container container-fluid flex-column flex-nowrap justify-content-between">
+  <div class="row flex-fill mb-3">
+    <div class="col">
+      <img class="cat-loader_image img-fluid rounded mx-auto d-block" src="{{cat.catUrl}}" alt="Cat" />
+    </div>
+  </div>
+  <div class="row flex-fill my-2">
+    <div class="col">
+    </div>
+    <div class="col">
+      <button type="button" (click)="getRandCat()" class="btn btn-outline-primary btn-block">Next Image</button>
+    </div>
+  </div>
+  <div class="row flex-fill my-2">
+    <div class="col">
+      <form name="form" #f="ngForm" id="form" (ngSubmit)="f.form.valid && saveCat(f)" novalidate>
+        <label for="category" hidden>Category</label>
+        <input type="text" class="form-control" name="category" [(ngModel)]="cat.category" #category="ngModel" [ngClass]="{ 'is-invalid': f.submitted && category.invalid }" aria-describedby="cat-egory" placeholder="Enter a cat-egory" required />
+        <div *ngIf="f.submitted && category.invalid" class="invalid-feedback">
+            <div *ngIf="category.errors.required">Category is required</div>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <button type="submit" form="form" [disabled]="!f.form.valid" class="btn btn-outline-primary btn-block">Save</button>
+    </div>
+  </div>
+</section>

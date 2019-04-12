@@ -1,0 +1,14 @@
+<section class="cat-list_container container-fluid flex-column flex-nowrap justify-content-between">
+  <div  class="row flex-fill mb-3">
+      <div class="col cat-list_image-list">
+        <h3 *ngIf="api.displayList">{{api.displayList.category}}</h3> <span *ngIf="api.displayList.items">{{api.displayList.items.length}}</span>
+      </div>
+  </div>
+  <div class="row flex-fill mb-3">
+    <div class="col cat-list_image-list">
+      <div class="cat-list_img-wrapper" *ngFor="let image of api.displayList.items">
+        <img class="cat-list_img img-fluid rounded mx-auto d-block img-thumbnail" src="{{image.catUrl}}" alt="Cat" />
+      </div>
+    </div>
+  </div>
+</section>
